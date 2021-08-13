@@ -1,0 +1,206 @@
+*{
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+html{
+  background: rgb(75, 177, 255);
+}
+h2{
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 60px;
+  letter-spacing: 1px;
+  font-family:'Times New Roman', Times, serif;
+}
+h1{
+  cursor: pointer;
+}
+i{
+  position: absolute;
+  right: 0.5em;
+  top: 1.5em
+}
+h1:before{
+  content: attr(data-count);
+  position: absolute;
+  right: 18px;
+  font-size: 18px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background: rgb(199, 32, 32);
+  border-radius: 50%;
+  opacity: 0;
+  top: 1.5em
+}
+h1.zero:before{
+  opacity: 1;
+}
+.products{
+  max-width: 1000px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+  padding: 0px 0px;
+}
+.products div{
+  width: 12em;
+  height: 20em;
+  background: #ffffff;
+  margin: 10px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+img{
+  width: 170px;
+  margin: .8em;
+}
+p{
+  margin: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(41, 41, 41);
+}
+h6{
+  font-size: 35px;
+  text-align: center;
+  color: rgb(201, 0, 0);
+}
+button{
+  padding: 5px 30px;
+  background: rgb(4, 113, 255);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fafafa;
+  cursor: pointer;
+  margin-left: 2em;
+  margin-top: 0em;
+  letter-spacing: 0.5px;
+}
+.products div span{
+  position: absolute;
+  top: 14px;
+  left: 13px;
+  width: 300px;
+  height: 186px;
+  display: none;
+}
+.products div span img{
+  width: 100%;
+  height: 100%;
+}
+.products div:nth-child(1)>span.active{
+  animation: first 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+.products div:nth-child(2)>span.active{
+  animation: second 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+.products div:nth-child(3)>span.active{
+  animation: third 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+.products div:nth-child(4)>span.active{
+  animation: fourth 0.5s ease-in;
+  z-index: 2;
+  display: block;
+}
+@keyframes first{
+  to{
+    width: 30px;
+    height: 20px;
+    left: 960px;
+    top: -70px;
+  }
+}
+@keyframes second{
+  to{
+    width: 30px;
+    height: 20px;
+    left: 750px;
+    top: -70px;
+  }
+}
+@keyframes third{
+  to{
+    width: 30px;
+    height: 20px;
+    left: 470px;
+    top: -70px;
+  }
+}
+@keyframes fourth{
+  to{
+    width: 30px;
+    height: 20px;
+    left: 265px;
+    top: -70px;
+  }
+}
+.select{
+  width: 530px;
+  height: 500px;
+  background: #222;
+  position: absolute;
+  top: -500px;
+  transition: 0.5s;
+  overflow-y: auto;
+  line-height: 4em;
+}
+.select.display{
+  top: 30px;
+  padding: 0.5em 2em;
+}
+.select div{
+  width: 100;
+  height: 100;
+  display: flex;
+  border: 1px solid white;
+  
+  position: relative;
+}
+.select div img{
+  width: 100;
+  height: 100;
+}
+.select div p{
+  padding: 35px;
+  color: white;
+}
+.select div h6,
+.select div button{
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  color: white;
+}
+.select div button{
+  left: 60%;
+  top: 55%;
+}
+.select div span{
+  display: none;
+}
+div a{
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-left: 13em;
+  background-color: rgb(4, 113, 255);
+  padding: 10px;
+  border-radius: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+}
